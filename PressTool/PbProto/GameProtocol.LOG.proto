@@ -1,0 +1,44 @@
+//用于定义系统打印关键日志文件的格式，方便后续分析
+
+enum LogMsgID
+{
+	LOG_CREATEROLE = 1001;						//创建角色
+	LOG_DELETEROLE = 1002;						//删除角色
+}
+
+//创建角色日志
+message CreateRole
+{
+	optional int64 iEventID = 1;				//事件ID，用于标记同类消息的唯一性
+	optional uint32 uin = 2;					//记录的玩家的uin
+	optional uint32 time = 3;					//日志记录的时间
+	optional uint32 iClientIP = 4;				//客户端的IP
+	optional string strRoleName = 5;			//角色的名字
+	optional uint32 iGender = 6;				//角色的性别
+	optional uint32 iAppType = 7;				//玩家平台的类型
+}
+
+//删除角色日志
+message DeleteRole
+{
+	optional int64 iEventID = 1;				//事件ID，用于标记同类消息的唯一性
+	optional uint32 uin = 2;					//就的玩家的uin
+	optional uint32 time = 3;					//日志记录的时间
+	optional uint32 iClientIP = 4;				//记录删除的客户端IP
+	optional string strRoleName = 5;			//角色的名字
+	optional uint32 iGender = 6;				//角色的职业
+	optional uint32 iRoleLevel = 7;				//角色的等级
+}
+
+//记录的日志的详细信息
+message LogDetail
+{
+	optional CreateRole stCreateRole = 1;		//创建角色的日志，对应LOG_CREATEROLE
+	optional DeleteRole stDeleteRole = 2;		//删除角色的日志，对应LOG_DELETEROLE
+}
+
+message LogPkg
+{
+	optional uint32 cmd = 1;					//记录的日志的类型
+	optional LogDetail details = 2;				//记录的日志的详细信息，定义在这边是方便后续的分析
+}

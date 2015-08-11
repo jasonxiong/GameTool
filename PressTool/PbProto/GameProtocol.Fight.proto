@@ -1,0 +1,118 @@
+//战斗相关的协议
+
+import "GameProtocol.Common.proto";
+import "GameProtocol.USERDB.proto";
+
+//玩家的战斗类型
+enum CombatType
+{
+	COMBAT_TYPE_INVALID = 0;				//非法的战斗类型
+	COMBAT_TYPE_PVE = 1;					//PVE战斗
+	COMBAT_TYPE_PVP = 2;					//PVP战斗
+}
+
+//战场上战斗单位的类型
+enum CombatUnitType
+{
+	COMBAT_UNIT_TYPE_INVALID = -1;			//非法的战斗单位类型
+	COMBAT_UNIT_TYPE_ROLE = 0;				//玩家的战斗单位
+	COMBAT_UNIT_TYPE_FRIEND = 1;			//好友的战斗单位
+	COMBAT_UNIT_TYPE_NPC = 2;				//系统控制的战斗单位
+	COMBAT_UNIT_TYPE_MAX = 3;				//战斗单位类型最大
+}
+
+//玩家开始战斗的请求
+message Zone_DoCombat_Request
+{
+	optional CombatType eType = 1 [default=COMBAT_TYPE_INVALID];//战斗的类型
+	optional int32 iLevelID = 2;			//如果是PVE，PVE战斗的关卡ID
+	optional int32 iNodeID = 3;				//战斗的节点ID
+}
+
+//玩家开始战斗的返回
+message Zone_DoCombat_Response
+{
+	optional int32 iResult = 1;				//开始战斗请求处理的结果
+}
+
+//战场上战斗单位的动态信息
+message CombatUnit
+{
+	optional CombatUnitType eType = 1;		//战斗单位的类型，包括角色、好友、NPC
+	optional int32 iConfigID = 2;			//战斗单位的配置ID
+	optional int32 iPosIndex = 3;			//战斗单位的位置，为0-5
+	optional int32 iArmorID = 4;			//战斗单位的护甲ID
+	optional int32 iRunesID = 5;			//战斗单位激活的魂石ID
+	repeated int32 iAttributes = 6;			//战斗单位的属性信息
+}
+
+//战斗牌堆的信息
+message CardHeap
+{
+	repeated int32 iCardID = 1;				//牌堆中卡牌的ID
+}
+
+//战场上战斗双方的阵营信息
+message CombatCamp
+{
+	optional uint32 uiUin = 1;				//该阵营拥有者的uin，如果是怪则为0
+	optional string strNickName = 2;		//如果是玩家，则为玩家的名字
+	repeated CombatUnit stUnits = 3;		//战斗单位的详细信息
+	repeated CardHeap stCardHeaps = 4;		//牌堆信息，数组下标和CombatUnitType对应
+}
+
+//玩家战场初始化信息的通知
+message Zone_Battlefield_Notify
+{
+	optional int32 iLevelID = 1;				//战斗关卡ID
+	optional CombatCamp stCampActive = 2;		//主动方阵营信息
+	optional CombatCamp stCampPassive = 3;		//被动方阵营信息
+}
+
+//角色单位的行动信息
+message RoleUnitAction
+{
+	optional int32 iPosIndex = 1;				//行动角色的位置
+	repeated int32 iCardIndex = 2;				//使用的牌在牌组中的位置,从0开始
+}
+
+//每回合的行动信息
+message OneRoundAction
+{
+	repeated RoleUnitAction stRoleActions = 1;	//角色单位行动的信息
+}
+
+//结束战斗的请求
+message Zone_FinCombat_Request
+{
+	repeated OneRoundAction stRounds = 1;		//回合行动信息
+	optional bool bIsActiveWin = 2;				//是否主动方胜利
+}
+
+//单个战斗奖励的详细信息
+message OneRewardInfo
+{
+	optional int32 iRewardType = 1;			//奖励掉落的类型
+	optional int32 iItemID = 2;				//如果是物品，物品的ID
+	optional int32 iResType = 3;			//如果是资源，为资源类型
+	optional int32 iDropNum = 4;			//掉落的数目
+}
+
+//战斗的奖励
+message CombatReward
+{
+	repeated OneRewardInfo stRewardInfo = 1;	//战斗奖励的详细信息
+}
+
+//结束战斗的返回
+message Zone_FinCombat_Response
+{
+	optional int32 iResult = 1;				//请求处理的结果
+}
+
+//战斗结束消息的通知
+message Zone_FinCombat_Notify
+{
+	optional bool bIsActiveWin = 1;         //是否主动战斗方获胜
+	optional CombatReward stReward = 2;     //战斗的奖励
+}

@@ -1,0 +1,128 @@
+//本文件中主要定义Account Server相关的通信协议
+
+import "GameProtocol.Common.proto";
+
+enum enAccountType
+{
+	LOGIN_PLATFORM_INVALID = 0;		//非法的登录渠道
+	LOGIN_PLATFORM_MAIN = 1;		//游戏官方平台
+}
+
+//玩家帐号的唯一ID
+message AccountID
+{
+	optional bytes strAccount = 1;		//玩家的帐号
+	optional int32 iAccountType = 2;		//玩家帐号的类型
+}
+
+//----------------------------------------------------------------
+
+//注册平台帐号的请求
+message RegAuth_RegAccount_Request
+{
+	optional AccountID stAccountID = 2;		//注册的帐号ID
+	optional bytes strPassword = 3;		//玩家注册帐号的密码
+}
+
+//注册平台帐号的返回
+message RegAuth_RegAccount_Response
+{
+	optional int32 iResult = 1;			//注册成功还是失败
+}
+
+//平台帐号的认证请求
+message RegAuth_AuthAccount_Request
+{
+	optional AccountID stAccountID = 1;		//登录认证的玩家帐号
+	optional bytes strPassword = 3;		//登录认证玩家的密码
+}
+
+//平台帐号的认证返回
+message RegAuth_AuthAccount_Response
+{
+	optional int32 iResult = 1;				//操作的返回结果
+	optional uint32 uin = 2;				//认证的返回的uin
+	optional int32 iWorldID = 3;			//玩家所在世界服的ID
+	optional string strAccountIP = 4;		//帐号服务器的IP
+	optional string strZoneIP = 5;			//Zone服务器的IP
+	optional bytes strSessionKey = 7;		//认证返回的sessionkey
+}
+
+//平台帐号的更新请求
+message RegAuth_UpdateAccount_Request
+{
+	optional AccountID stAccountID = 1;		//玩家的AccountID
+	optional bytes strPassword = 2;		//玩家的帐号密码
+}
+
+//平台帐号更新请求的返回
+message RegAuth_UpdateAccount_Response
+{
+	optional int32 iResult = 1;				//操作返回的结果
+}
+
+
+//----------------------------------------------------------------
+
+//----------------------------------------------------------------
+
+//帐号数据库服务器相关的协议
+//----------------------------------------------------------------
+
+//增加新帐号记录的请求
+message AccountDB_AddAccount_Request
+{
+	optional AccountID stAccountID = 1;		//插入的帐号ID
+	optional uint32 uin = 2;				//玩家的uin
+	optional int32 iWorldID = 3;			//玩家所在世界服ID
+	optional bytes strPassword = 4;			//插入的帐号的密码，加密后的
+	optional bool bIsBinded = 5;			//帐号是否绑定状态
+}
+
+//增加新帐号记录的返回
+message AccountDB_AddAccount_Response
+{
+	optional int32 iResult = 1;				//插入记录请求的处理结果
+}
+
+//拉取帐号记录的请求
+message AccountDB_FetchAccount_Request
+{
+	optional AccountID stAccountID = 1;		//拉取的帐号ID
+	optional bytes strPassword = 4;		//拉取的帐号的密码
+}
+
+//拉取帐号记录的返回
+message AccountDB_FetchAccount_Response
+{
+	optional int32 iResult = 1;				//拉取帐号请求的返回结果
+	optional AccountID stAccountID = 2;		//拉取的帐号ID
+	optional uint32 uin = 4;				//拉取的帐号的uin
+	optional int32 iWorldID = 5;			//玩家所在世界服ID
+	optional bool bIsBinded = 6;			//帐号是否绑定状态
+}
+
+//更新帐号记录的请求
+message AccountDB_UpdateAccount_Request
+{
+	optional AccountID stAccountID = 1;		//更新的帐号ID
+	optional bytes strPassword = 3;		//帐号的密码	
+}
+
+//更新帐号记录的返回
+message AccountDB_UpdateAccount_Response
+{
+	optional int32 iResult = 1;				//更新帐号请求的处理结果
+}
+
+//删除帐号记录的请求
+message AccountDB_DeleteAccount_Request
+{
+	optional AccountID stAccountID = 1;		//删除的帐号ID
+}
+
+//删除帐号记录的返回
+message AccountDB_DeleteAccount_Response
+{
+	optional int32 iResult = 1;				//删除帐号请求的处理结果
+}

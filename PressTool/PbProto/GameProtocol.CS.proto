@@ -1,0 +1,155 @@
+package GameProtocol.CS;
+
+//本文件中定义所有的客户端和服务器的通信协议格式
+
+import "GameProtocol.Common.proto";
+import "GameProtocol.Account.proto";
+import "GameProtocol.World.proto";
+import "GameProtocol.Zone.proto";
+import "GameProtocol.RegAuth.proto";
+import "GameProtocol.MsgID.proto";
+import "GameProtocol.Fight.proto";
+
+//客户端服务器通信的消息结构体
+message CSMsgBody
+{
+	//------------------------------------------------------------------------------	
+	//游戏帐号系统相关的协议，使用消息的ID为 1-20
+	//注册平台帐号相关协议
+	optional AccountDB_AddAccount_Request m_stAccountDB_AddAccount_Request = 1;				//帐号DB新增帐号请求，对应MSGID_ACCOUNTDB_ADDACCOUNT_REQUEST
+	optional AccountDB_AddAccount_Response m_stAccountDB_AddAccount_Response = 2;			//帐号DB新增帐号返回，对应MSGID_ACCOUNTDB_ADDACCOUNT_RESPONSE
+	optional AccountDB_DeleteAccount_Request m_stAccountDB_Delete_Request = 3;				//帐号DB删除帐号请求，对应MSGID_ACCOUNTDB_DELETE_REQUEST
+	optional AccountDB_DeleteAccount_Response m_stAccountDB_Delete_Response = 4;			//帐号DB删除帐号返回，对应MSGID_ACCOUNTDB_DELETE_RESPONSE
+	optional AccountDB_FetchAccount_Request m_stAccountDB_Fetch_Request = 5;				//帐号DB拉取帐号请求，对应MSGID_ACCOUNTDB_FETCH_REQUEST
+	optional AccountDB_FetchAccount_Response m_stAccountDB_Fetch_Response = 6;				//帐号DB拉取帐号返回，对应MSGID_ACCOUNTDB_FETCH_RESPONSE
+	optional AccountDB_UpdateAccount_Request m_stAccountDB_Update_Request = 7;				//帐号DB更新帐号请求，对应MSGID_ACCOUNTDB_UPDATE_REQUEST
+	optional AccountDB_UpdateAccount_Response m_stAccountDB_Update_Response = 8;			//帐号DB更新帐号请求，对应MSGID_ACCOUNTDB_UPDATE_RESPONSE
+
+	//平台帐号的注册协议
+	optional RegAuth_RegAccount_Request m_stRegAuth_RegAccount_Request = 9;					//帐号服务注册帐号请求，对应MSGID_REGAUTH_REGACCOUNT_REQUEST
+	optional RegAuth_RegAccount_Response m_stRegAuth_RegAccount_Response = 10;				//帐号服务注册帐号返回，对应MSGID_REGAUTH_REGACCOUNT_RESPONSE
+	
+	//平台帐号的登录认证协议
+	optional RegAuth_AuthAccount_Request m_stRegAuth_AuthAccount_Request = 11;				//帐号服务认证帐号请求，对应MSGID_REGAUTH_AUTHACCOUNT_REQUEST
+	optional RegAuth_AuthAccount_Response m_stRegAuth_AuthAccount_Response = 12;			//帐号服务认证帐号返回，对应MSGID_REGAUTH_AUTHACCOUNT_RESPONSE
+	
+	//平台帐号的更新协议
+	optional RegAuth_UpdateAccount_Request m_stRegAuth_UpdateAccount_Request = 13;			//帐号服务更新帐号请求，对应MSGID_REGAUTH_UPDATE_REQUEST
+	optional RegAuth_UpdateAccount_Response m_stRegAuth_UpdateAccount_Response = 14;		//帐号服务器更新帐号返回，对应MSGID_REGAUTH_UPDATE_RESPONSE
+
+	//------------------------------------------------------------------------------	
+
+
+	
+	//------------------------------------------------------------------------------	
+
+	//游戏完整功能相关的协议，使用的消息ID为 21 及以上 
+
+	optional CreateRole_Account_Request		m_stAccountCreateRoleRequest = 21;				//Account Server创建角色的请求,对应MSGID_ACCOUNT_CREATEROLE_REQUEST
+	optional CreateRole_Account_Response	m_stAccountCreateRoleResponse = 22;				//Account Server创建角色请求的返回,对应MSGID_ACCOUNT_CREATEROLE_RESPONSE
+	optional Account_ListZone_Request		m_stAccount_ListZone_Request = 23;				//Account Server拉取区服务器的请求，对应MSGID_ACCOUNT_LISTZONE_REQUEST
+	optional Account_ListZone_Response		m_stAccount_ListZone_Response = 24;				//Account Server拉取区服务器的的返回，对应MSGID_ACCOUNT_LISTZONE_RESPONSE
+	optional DeleteRole_Account_Request		m_stAccountDeleteRoleRequest = 25;				//Account Server删除玩家角色的请求，对应MSGID_ACCOUNT_DELETEROLE_REQUEST
+	optional DeleteRole_Account_Response	m_stAccountDeleteRoleResponse = 26;				//Account Server删除玩家角色的返回，对应MSGID_ACCOUNT_DELETEROLE_RESPONSE
+	optional Account_ListRole_Request		m_stAccountListRoleRequest = 27;					//Account Server查询玩家角色的请求，对应MSGID_ACCOUNT_LISTROLE_REQUEST
+	optional Account_ListRole_Response		m_stAccountListRoleResponse = 28;				//Account Server查询玩家角色的返回，对应MSGID_ACCOUNT_LISTROLE_RESPONSE
+
+	//optional LogoutServer_Reuqest			m_stLogoutServer_Request = 29;					//登出服务器的请求，对应MSGID_LOGOUTSERVER_REQUEST
+	optional LogoutServer_Response			m_stLogoutServer_Response = 30;					//登出服务器的返回，对应MSGID_LOGOUTSERVER_RESPONSE
+
+	optional World_ZoneChanged_Notify		m_stWorld_ZoneChanged_Notify = 31;				//区服务器更新的通知，对应MSGID_WORLD_ZONECHANGED_NOTIFY
+	optional World_CreateRole_Request		m_stWorld_CreateRole_Request = 32;				//世界服务器创建角色的请求,对应MSGID_WORLD_CREATEROLE_REQUEST
+	optional World_CreateRole_Response		m_stWorld_CreateRole_Response = 33;				//世界服务器创建角色的返回，对应MSGID_WORLD_CREATEROLE_RESPONSE
+	optional World_FetchRole_Request		m_stWorld_FetchRole_Request = 34;				//世界拉取角色数据的请求,对应MSGID_WORLD_FETCHROLE_REQUEST
+	optional World_FetchRole_Response		m_stWorld_FetchRole_Response = 35;				//世界拉取角色数据的返回，对应MSGID_WORLD_FETCHROLE_RESPONSE
+	
+	optional Zone_Logout_Notify				m_stZone_Logout_Notify = 36;					//Zone Server 玩家下线的通知,对应MSGID_ZONE_LOGOUT_NOTIFY
+
+	optional World_UpdateRole_Request		m_stWorld_UpdateRole_Request = 37;				//World请求更新玩家数据的请求,对应MSGID_WORLD_UPDATEROLE_REQUEST
+	optional World_UpdateRole_Response		m_stWorld_UpdateRole_Response = 38;				//World请求更新玩家数据的返回,对应MSGID_WORLD_UPDATEROLE_RESPONSE
+	optional Zone_GetFriendInfo_Request		m_stZone_GetFriendInfo_Request = 39;			//Zone拉取好友详细信息的请求，对应MSGID_ZONE_FRIENDINFO_REQUEST
+	optional Zone_GetFriendInfo_Response	m_stZone_GetFriendInfo_Response = 40;			//Zone拉取好友详细信息的返回，对应MSGID_ZONE_FRIENDINFO_RESPONSE
+
+	//玩家登录相关的协议
+	optional Zone_LoginServer_Request		m_stZone_LoginServer_Request = 41;				//Zone的玩家登录请求，对应MSGID_ZONE_LOGINSERVER_REQUEST
+	optional Zone_LoginServer_Response		m_stZone_LoginServer_Response = 42;				//Zone的玩家登录返回，对应MSGID_ZONE_LOGINSERVER_RESPONSE
+	
+	//世界踢人下线的相关协议
+	optional World_KickRole_Request			m_stWorld_KickRole_Request = 43;				//World踢人下线的请求，对应MSGID_WORLD_KICKROLE_REQUEST
+	optional World_KickRole_Response		m_stWorld_KickRole_Response = 44;				//World踢人下线的返回，对应MSGID_WORLD_KICKROLE_RESPONSE
+
+	//分区向世界上报状态的协议
+	optional Zone_OnlineRole_Request		m_stZone_OnlineRole_Request = 45;				//Zone上报分区状态的请求，对应MSGID_ZONE_ONLINEROLENUM_REQUEST
+
+	//World向Cluster上报状态相关协议
+	optional World_OnlineStat_Request		m_stWorld_OnlineStat_Request = 46;				//World向Cluster上报状态的请求，对应MSGID_WORLD_ONLINESTAT_REQUEST
+	optional World_OnlineStat_Response		m_stWorld_OnlineStat_Response = 47;				//World向Cluster上报状态的返回，对应MSGID_WORLD_ONLINESTAT_RESPONSE
+
+	
+	//GM管理员GM操作的协议
+	optional Zone_GameMaster_Request		m_stZone_GameMaster_Request = 48;				//GM管理员GM操作的请求，对应MSGID_ZONE_GAMEMASTER_REQUEST
+	optional Zone_GameMaster_Response		m_stZone_GameMaster_Response = 49;				//GM管理员GM操作的返回，对应MSGID_ZONE_GAMEMASTER_RESPONSE
+
+
+	//名字服务器中增加新名字的协议
+	optional AddNewName_Request				m_stAddNewName_Request = 50;					//名字服务增加名字请求，对应MSGID_ADDNEWNAME_REQUEST
+	optional AddNewName_Response			m_stAddNewName_Response = 51;					//名字服务增加名字返回，对应MSGID_ADDNEWNAME_RESPONSE
+
+	//名字服务器中删除名字的协议
+	optional DeleteName_Request				m_stDeleteName_Request = 52;					//名字服务删除名字的请求，对应MSGID_DELETENAME_REQUEST
+	optional DeleteName_Response			m_stDeleteName_Response = 53;					//名字服务删除名字的返回，对应MSGID_DELETENAME_RESPONSE
+
+	//玩家角色登录的通知
+	optional Zone_LoginServer_Notify		m_stLoginServer_Notify = 57;					//玩家登录的消息推送,对应MSGID_ZONE_LOGINSERVER_NOTIFY
+
+	//玩家背包操作相关的协议
+	optional Zone_RepOpera_Request			m_stZone_RepOpera_Request = 64;					//背包物品操作的请求，对应MSGID_ZONE_REPOPERA_REQUEST
+	optional Zone_RepOpera_Response			m_stZone_RepOpera_Response = 65;				//背包物品操作的返回，对应MSGID_ZONE_REPOPERA_RESPONSE
+	optional Zone_GetRepInfo_Request		m_stZone_GetRepInfo_Request = 66;				//拉取背包物品的请求，对应MSGID_ZONE_GETREPINFO_REQUEST
+	optional Zone_GetRepInfo_Response		m_stZone_GetRepInfo_Response = 67;				//拉取背包物品的返回，对应MSGID_ZONE_GETREPINFO_RESPONSE
+	optional Zone_WearEquip_Request			m_stZone_WearEquip_Request = 68;				//背包中穿戴装备的请求，对应MSGID_ZONE_WEAREQUIP_REQUEST
+	optional Zone_WearEquip_Response		m_stZone_WearEquip_Response = 69;				//背包中穿戴装备的返回，对应MSGID_ZONE_WEAREQUIP_RESPONSE
+	optional Zone_RepChange_Notify			m_stZone_RepChange_Notify = 70;					//背包物品发生变化的通知，对应MSGID_ZONE_REPCHANGE_NOTIFY
+
+	//玩家游戏资源变化的通知
+	optional Zone_ResourceChange_Notify		m_stZone_ResourceChange_Notify = 73;			//玩家资源变化的通知，对应MSGID_ZONE_RESOURCECHANGE_NOTIFY
+
+	//玩家聊天相关协议
+	optional Zone_Chat_Request				m_stZone_Chat_Request = 76;						//玩家聊天的请求，对应MSGID_ZONE_CHAT_REQUEST
+	optional Zone_Chat_Response				m_stZone_Chat_Response = 77;					//玩家聊天的返回，对应MSGID_ZONE_CHAT_RESPONSE
+	optional World_Chat_Notify				m_stWorld_Chat_Notify = 78;						//世界聊天信息转发，对应MSGID_WORLD_CHAT_NOTIFY
+
+	//玩家出售物品的协议
+	optional Zone_SellItem_Request			m_stZone_SellItem_Request = 79;					//玩家出售物品的请求，对应MSGID_ZONE_SELLITEM_REQUEST
+	optional Zone_SellItem_Response			m_stZone_SellItem_Response = 80;				//玩家出售物品的返回，对应MSGID_ZONE_SELLITEM_RESPONSE
+
+	//玩家战斗相关的协议
+	optional Zone_DoCombat_Request			m_stZone_DoCombat_Request = 81;					//玩家开始战斗的请求，对应MSGID_ZONE_DOCOMBAT_REQUEST
+	optional Zone_DoCombat_Response			m_stZone_DoCombat_Response = 82;				//玩家开始战斗的返回，对应MSGID_ZONE_DOCOMBAT_RESPONSE
+	optional Zone_Battlefield_Notify		m_stZone_Battlefield_Notify = 83;				//玩家战场信息的通知，对应MSGID_ZONE_BATTLEFIELD_NOTIFY
+	optional Zone_FinCombat_Request			m_stZone_FinCombat_Request = 94;				//玩家结束战斗的请求，对应MSGID_ZONE_FINCOMBAT_REQUEST
+	optional Zone_FinCombat_Response		m_stZone_FinCombat_Response = 95;				//玩家结束战斗的返回，对应MSGID_ZONE_FINCOMBAT_RESPONSE
+	optional Zone_FinCombat_Notify			m_stZone_FinCombat_Notify = 96;					//玩家结束战斗的通知，对应MSGID_ZONE_FINCOMBAT_NOTIFY
+
+	//玩家任务相关的协议
+	optional Zone_UnitMove_Request			m_stZone_UnitMove_Request = 97;					//玩家移动的请求，对应MSGID_ZONE_UNITMOVE_REQUEST
+	optional Zone_UnitMove_Response			m_stZone_UnitMove_Response = 98;				//玩家移动的返回，对应MSGID_ZONE_UNITMOVE_RESPONSE
+	optional Zone_FinQuest_Notify			m_stZone_FinQuest_Notify = 99;					//完成任务的通知，对应MSGID_ZONE_FINQUEST_NOTIFY
+}
+
+//客户端服务器通信的消息头
+message CSMsgHead
+{
+	optional uint32 m_uiSessionFd = 1;			//玩家的Session ID
+	optional ProtocolMsgID m_uiMsgID = 2		[default=MSGID_PROTOCOL_INVALID_MSG];		
+												//消息的类型编号，用于解析消息结构体
+	optional uint32 m_uin = 3;					//玩家的帐号
+	optional string m_strSessionKey = 4;		//玩家当前的session key
+}
+
+//客户端和服务器通信的协议
+message ProtocolCSMsg
+{
+	optional CSMsgHead m_stMsgHead = 1;			//协议头
+	optional CSMsgBody m_stMsgBody = 2;			//协议的结构体
+}
