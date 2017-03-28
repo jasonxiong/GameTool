@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1, 
+    "Threshold_i_min": 0, 
+    "Threshold_i_max": 250, 
+    "Decrease_i": 800
+  }, 
+  {
+    "id": 2, 
+    "Threshold_i_min": 250, 
+    "Threshold_i_max": 500, 
+    "Decrease_i": 500
+  }, 
+  {
+    "id": 3, 
+    "Threshold_i_min": 500, 
+    "Threshold_i_max": 800, 
+    "Decrease_i": 300
+  }, 
+  {
+    "id": 4, 
+    "Threshold_i_min": 800, 
+    "Threshold_i_max": 1000, 
+    "Decrease_i": 100
+  }
+]

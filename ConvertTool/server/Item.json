@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 90001, 
+    "type_i": 1, 
+    "Cost_i": 2000, 
+    "Value_1_i": 20, 
+    "Value_2_i": 0, 
+    "Value_3_i": 0
+  }, 
+  {
+    "Id": 90002, 
+    "type_i": 2, 
+    "Cost_i": 2000, 
+    "Value_1_i": 15, 
+    "Value_2_i": 20, 
+    "Value_3_i": 0
+  }, 
+  {
+    "Id": 90003, 
+    "type_i": 3, 
+    "Cost_i": 5000, 
+    "Value_1_i": 20, 
+    "Value_2_i": 0, 
+    "Value_3_i": 0
+  }
+]

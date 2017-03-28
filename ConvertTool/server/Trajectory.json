@@ -1,0 +1,911 @@
+[
+  {
+    "Key": 1, 
+    "Id_i": 601, 
+    "Trajectoryid_i": 60101, 
+    "Starttime_i": 0, 
+    "Fishid_i": 7, 
+    "Intervaltime_i": 1280, 
+    "Number_i": 32
+  }, 
+  {
+    "Key": 2, 
+    "Id_i": 601, 
+    "Trajectoryid_i": 60102, 
+    "Starttime_i": 0, 
+    "Fishid_i": 7, 
+    "Intervaltime_i": 1280, 
+    "Number_i": 32
+  }, 
+  {
+    "Key": 3, 
+    "Id_i": 601, 
+    "Trajectoryid_i": 60103, 
+    "Starttime_i": 18800, 
+    "Fishid_i": 14, 
+    "Intervaltime_i": 2863, 
+    "Number_i": 10
+  }, 
+  {
+    "Key": 4, 
+    "Id_i": 602, 
+    "Trajectoryid_i": 60201, 
+    "Starttime_i": 0, 
+    "Fishid_i": 39, 
+    "Intervaltime_i": 3400, 
+    "Number_i": 10
+  }, 
+  {
+    "Key": 5, 
+    "Id_i": 602, 
+    "Trajectoryid_i": 60202, 
+    "Starttime_i": 17000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 340, 
+    "Number_i": 42
+  }, 
+  {
+    "Key": 6, 
+    "Id_i": 602, 
+    "Trajectoryid_i": 60203, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 1300, 
+    "Number_i": 27
+  }, 
+  {
+    "Key": 7, 
+    "Id_i": 602, 
+    "Trajectoryid_i": 60204, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 1300, 
+    "Number_i": 27
+  }, 
+  {
+    "Key": 8, 
+    "Id_i": 603, 
+    "Trajectoryid_i": 60301, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 440, 
+    "Number_i": 82
+  }, 
+  {
+    "Key": 9, 
+    "Id_i": 603, 
+    "Trajectoryid_i": 60302, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 440, 
+    "Number_i": 82
+  }, 
+  {
+    "Key": 10, 
+    "Id_i": 603, 
+    "Trajectoryid_i": 60303, 
+    "Starttime_i": 19500, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 250, 
+    "Number_i": 136
+  }, 
+  {
+    "Key": 11, 
+    "Id_i": 603, 
+    "Trajectoryid_i": 60304, 
+    "Starttime_i": 19500, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 250, 
+    "Number_i": 136
+  }, 
+  {
+    "Key": 12, 
+    "Id_i": 604, 
+    "Trajectoryid_i": 60401, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 800, 
+    "Number_i": 37
+  }, 
+  {
+    "Key": 13, 
+    "Id_i": 604, 
+    "Trajectoryid_i": 60402, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 800, 
+    "Number_i": 37
+  }, 
+  {
+    "Key": 14, 
+    "Id_i": 604, 
+    "Trajectoryid_i": 60403, 
+    "Starttime_i": 0, 
+    "Fishid_i": 6, 
+    "Intervaltime_i": 950, 
+    "Number_i": 31
+  }, 
+  {
+    "Key": 15, 
+    "Id_i": 604, 
+    "Trajectoryid_i": 60404, 
+    "Starttime_i": 0, 
+    "Fishid_i": 6, 
+    "Intervaltime_i": 950, 
+    "Number_i": 31
+  }, 
+  {
+    "Key": 16, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60501, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 17, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60502, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 18, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60503, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 19, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60504, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 20, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60505, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 21, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60506, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 22, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60507, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 23, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60508, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 24, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60509, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 25, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60510, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 26, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60511, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 27, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60512, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 28, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60513, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 29, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60514, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 30, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60515, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 31, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60516, 
+    "Starttime_i": 0, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 12
+  }, 
+  {
+    "Key": 32, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60517, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 33, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60518, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 34, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60519, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 35, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60520, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 36, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60521, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 37, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60522, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 38, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60523, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 39, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60524, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 40, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60525, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 41, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60526, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 42, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60527, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 43, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60528, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 44, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60529, 
+    "Starttime_i": 12000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 1000, 
+    "Number_i": 21
+  }, 
+  {
+    "Key": 45, 
+    "Id_i": 605, 
+    "Trajectoryid_i": 60530, 
+    "Starttime_i": 8200, 
+    "Fishid_i": 74, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 46, 
+    "Id_i": 606, 
+    "Trajectoryid_i": 60601, 
+    "Starttime_i": 0, 
+    "Fishid_i": 79, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 47, 
+    "Id_i": 606, 
+    "Trajectoryid_i": 60602, 
+    "Starttime_i": 0, 
+    "Fishid_i": 79, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 48, 
+    "Id_i": 606, 
+    "Trajectoryid_i": 60603, 
+    "Starttime_i": 0, 
+    "Fishid_i": 79, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 49, 
+    "Id_i": 606, 
+    "Trajectoryid_i": 60604, 
+    "Starttime_i": 8000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 300, 
+    "Number_i": 60
+  }, 
+  {
+    "Key": 50, 
+    "Id_i": 606, 
+    "Trajectoryid_i": 60605, 
+    "Starttime_i": 8000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 300, 
+    "Number_i": 60
+  }, 
+  {
+    "Key": 51, 
+    "Id_i": 606, 
+    "Trajectoryid_i": 60606, 
+    "Starttime_i": 8000, 
+    "Fishid_i": 1, 
+    "Intervaltime_i": 300, 
+    "Number_i": 60
+  }, 
+  {
+    "Key": 52, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60701, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 53, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60702, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 54, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60703, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 55, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60704, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 56, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60705, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 57, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60706, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 58, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60707, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 59, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60708, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 60, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60709, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 61, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60710, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 62, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60711, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 63, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60712, 
+    "Starttime_i": 3500, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 64, 
+    "Id_i": 607, 
+    "Trajectoryid_i": 60713, 
+    "Starttime_i": 0, 
+    "Fishid_i": 84, 
+    "Intervaltime_i": 16000, 
+    "Number_i": 4
+  }, 
+  {
+    "Key": 65, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60801, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 66, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60802, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 67, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60803, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 68, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60804, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 69, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60805, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 70, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60806, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 71, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60807, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 72, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60808, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 73, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60809, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 74, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60810, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 75, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60811, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 76, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60812, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 77, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60813, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 78, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60814, 
+    "Starttime_i": 0, 
+    "Fishid_i": 24, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 79, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60815, 
+    "Starttime_i": 6000, 
+    "Fishid_i": 89, 
+    "Intervaltime_i": 0, 
+    "Number_i": 1
+  }, 
+  {
+    "Key": 80, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60816, 
+    "Starttime_i": 3000, 
+    "Fishid_i": 69, 
+    "Intervaltime_i": 7000, 
+    "Number_i": 2
+  }, 
+  {
+    "Key": 81, 
+    "Id_i": 608, 
+    "Trajectoryid_i": 60817, 
+    "Starttime_i": 3000, 
+    "Fishid_i": 69, 
+    "Intervaltime_i": 7000, 
+    "Number_i": 2
+  }, 
+  {
+    "Key": 82, 
+    "Id_i": 609, 
+    "Trajectoryid_i": 60901, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 630, 
+    "Number_i": 60
+  }, 
+  {
+    "Key": 83, 
+    "Id_i": 609, 
+    "Trajectoryid_i": 60902, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 630, 
+    "Number_i": 60
+  }, 
+  {
+    "Key": 84, 
+    "Id_i": 609, 
+    "Trajectoryid_i": 60903, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 630, 
+    "Number_i": 47
+  }, 
+  {
+    "Key": 85, 
+    "Id_i": 609, 
+    "Trajectoryid_i": 60904, 
+    "Starttime_i": 0, 
+    "Fishid_i": 3, 
+    "Intervaltime_i": 630, 
+    "Number_i": 47
+  }, 
+  {
+    "Key": 86, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61001, 
+    "Starttime_i": 16000, 
+    "Fishid_i": 74, 
+    "Intervaltime_i": 8000, 
+    "Number_i": 3
+  }, 
+  {
+    "Key": 87, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61002, 
+    "Starttime_i": 16000, 
+    "Fishid_i": 14, 
+    "Intervaltime_i": 8000, 
+    "Number_i": 3
+  }, 
+  {
+    "Key": 88, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61003, 
+    "Starttime_i": 16000, 
+    "Fishid_i": 14, 
+    "Intervaltime_i": 8000, 
+    "Number_i": 3
+  }, 
+  {
+    "Key": 89, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61004, 
+    "Starttime_i": 16000, 
+    "Fishid_i": 14, 
+    "Intervaltime_i": 8000, 
+    "Number_i": 3
+  }, 
+  {
+    "Key": 90, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61005, 
+    "Starttime_i": 16000, 
+    "Fishid_i": 14, 
+    "Intervaltime_i": 8000, 
+    "Number_i": 3
+  }, 
+  {
+    "Key": 91, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61006, 
+    "Starttime_i": 0, 
+    "Fishid_i": 7, 
+    "Intervaltime_i": 1500, 
+    "Number_i": 34
+  }, 
+  {
+    "Key": 92, 
+    "Id_i": 610, 
+    "Trajectoryid_i": 61007, 
+    "Starttime_i": 0, 
+    "Fishid_i": 7, 
+    "Intervaltime_i": 1500, 
+    "Number_i": 34
+  }, 
+  {
+    "Key": 93, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61101, 
+    "Starttime_i": 0, 
+    "Fishid_i": 39, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 8
+  }, 
+  {
+    "Key": 94, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61102, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 95, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61103, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 96, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61104, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 97, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61105, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 98, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61106, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 99, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61107, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 100, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61108, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }, 
+  {
+    "Key": 101, 
+    "Id_i": 611, 
+    "Trajectoryid_i": 61109, 
+    "Starttime_i": 6100, 
+    "Fishid_i": 5, 
+    "Intervaltime_i": 6100, 
+    "Number_i": 7
+  }
+]

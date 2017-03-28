@@ -1,0 +1,114 @@
+[
+  {
+    "type": 1, 
+    "value": 4
+  }, 
+  {
+    "type": 2, 
+    "value": 180
+  }, 
+  {
+    "type": 3, 
+    "value": 1300
+  }, 
+  {
+    "type": 4, 
+    "value": 20
+  }, 
+  {
+    "type": 5, 
+    "value": 100
+  }, 
+  {
+    "type": 6, 
+    "value": 300
+  }, 
+  {
+    "type": 7, 
+    "value": 150
+  }, 
+  {
+    "type": 8, 
+    "value": 5
+  }, 
+  {
+    "type": 9, 
+    "value": 0
+  }, 
+  {
+    "type": 10, 
+    "value": 0
+  }, 
+  {
+    "type": 11, 
+    "value": 0
+  }, 
+  {
+    "type": 12, 
+    "value": 1000
+  }, 
+  {
+    "type": 13, 
+    "value": 30
+  }, 
+  {
+    "type": 14, 
+    "value": 5
+  }, 
+  {
+    "type": 15, 
+    "value": 140
+  }, 
+  {
+    "type": 16, 
+    "value": 400
+  }, 
+  {
+    "type": 17, 
+    "value": 180
+  }, 
+  {
+    "type": 18, 
+    "value": 100000000
+  }, 
+  {
+    "type": 19, 
+    "value": 100
+  }, 
+  {
+    "type": 20, 
+    "value": 100
+  }, 
+  {
+    "type": 21, 
+    "value": 480
+  }, 
+  {
+    "type": 22, 
+    "value": 720
+  }, 
+  {
+    "type": 23, 
+    "value": 20
+  }, 
+  {
+    "type": 24, 
+    "value": 166
+  }, 
+  {
+    "type": 25, 
+    "value": 100
+  }, 
+  {
+    "type": 26, 
+    "value": 498
+  }, 
+  {
+    "type": 9999, 
+    "value": 1001
+  }, 
+  {
+    "type": 8888, 
+    "value": 10001
+  }
+]

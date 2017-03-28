@@ -1,0 +1,140 @@
+{
+    "server":{
+        "totype":"json",
+        "filelist":[
+            {
+                "fromfile":"Fish",
+                "tofile":"Fish.json",
+                "data":
+                [
+                    {"name":"id", "type":"int", "desc":"出鱼ID"},
+                    {"name":"Time_min_i", "type":"int", "desc":"出鱼最小时间"},
+                    {"name":"Time_max_i", "type":"int", "desc":"出鱼最大时间"},
+                    {"name":"Sequence_i", "type":"int", "desc":"鱼所属的鱼组"},
+                    {"name":"Type_i", "type":"int", "desc":"鱼的类型"},
+                    {"name":"Adjust_i", "type":"int", "desc":"概率修正"},
+                    {"name":"Occurrence_i", "type":"int", "desc":"出现概率"},
+                    {"name":"X_i", "type":"int", "desc":"初始坐标X"},
+                    {"name":"Y_i", "type":"int", "desc":"初始坐标Y"},
+                    {"name":"X2_i", "type":"int", "desc":"出鱼时间调整X2"},
+                    {"name":"X3_i", "type":"int", "desc":"出鱼时间调整X3"},
+                    {"name":"X4_i", "type":"int", "desc":"出鱼时间调整X4"},
+                    {"name":"Multiple_i", "type":"string", "desc":"鱼的倍率区间"},
+                    {"name":"Tracetype_i", "type":"string", "desc":"所属轨迹类型"}
+                ]
+            },
+            {
+                "fromfile":"Battery",
+                "tofile":"Battery.json",
+                "data":
+                [
+                    {"name":"id", "type":"int", "desc":"炮台ID"},
+                    {"name":"Multiple_i", "type":"int", "desc":"炮台倍数"},
+                    {"name":"Consume_i", "type":"int", "desc":"发炮消耗"}
+                ]
+            },
+            {
+                "fromfile":"Global",
+                "tofile":"Global.json",
+                "data":
+                [
+                    {"name":"type", "type":"int", "desc":"全局配置类型ID"},
+                    {"name":"value", "type":"int", "desc":"全局配置类型的值"}
+                ]
+            },
+            {
+                "fromfile":"Algorithm",
+                "tofile":"Algorithm.json",
+                "data":
+                [
+                    {"name":"id", "type":"int", "desc":"配置ID"},
+                    {"name":"value_i_min", "type":"int", "desc":"区间最小"},
+                    {"name":"value_i_max", "type":"int", "desc":"区间最大"},
+                    {"name":"step_i", "type":"int", "desc":"步长"},
+                    {"name":"decrease_i", "type":"int", "desc":"概率减少"}
+                ]
+            },
+            {
+                "fromfile":"Stock",
+                "tofile":"Stock.json",
+                "data":
+                [
+                    {"name":"id", "type":"int", "desc":"配置ID"},
+                    {"name":"Threshold_i_min", "type":"int", "desc":"区间最小"},
+                    {"name":"Threshold_i_max", "type":"int", "desc":"区间最大"},
+                    {"name":"Decrease_i", "type":"int", "desc":"概率减少"}
+                ]
+            },
+            {
+                "fromfile":"Trajectory",
+                "tofile":"Trajectory.json",
+                "data":
+                [
+                    {"name":"Key", "type":"int", "desc":"鱼阵ID"},
+                    {"name":"Id_i", "type":"int", "desc":"鱼阵类型ID"},
+                    {"name":"Trajectoryid_i", "type":"int", "desc":"鱼阵轨迹ID"},
+                    {"name":"Starttime_i", "type":"int", "desc":"开始时间"},
+                    {"name":"Fishid_i", "type":"int", "desc":"鱼阵鱼ID"},
+                    {"name":"Intervaltime_i", "type":"int", "desc":"出鱼间隔"},
+                    {"name":"Number_i", "type":"int", "desc":"出鱼数量"}
+                ]
+            },
+            {
+                "fromfile":"Formationtime",
+                "tofile":"Formationtime.json",
+                "data":
+                [
+                    {"name":"id", "type":"int", "desc":"配置ID"},
+                    {"name":"weight_i", "type":"int", "desc":"出鱼权重"},
+                    {"name":"Pausetime_i", "type":"int", "desc":"暂停时间"}
+                ]
+            },
+            {
+                "fromfile":"Item",
+                "tofile":"Item.json",
+                "data":
+                [
+                    {"name":"Id", "type":"int", "desc":"道具ID"},
+                    {"name":"type_i", "type":"int", "desc":"道具类型"},
+                    {"name":"Cost_i", "type":"int", "desc":"道具消耗"},
+                    {"name":"Value_1_i", "type":"int", "desc":"道具效果参数1"},
+                    {"name":"Value_2_i", "type":"int", "desc":"道具效果参数2"},
+                    {"name":"Value_3_i", "type":"int", "desc":"道具效果参数3"}
+                ]
+            },
+            {
+                "fromfile":"Smallfishgroup",
+                "tofile":"Smallfishgroup.json",
+                "data":
+                [
+                    {"name":"Id", "type":"int", "desc":"小鱼组ID"},
+                    {"name":"Position", "type":"string", "desc":"小鱼组位置"}
+                ]
+            },
+            {
+                "fromfile":"Loginreward",
+                "tofile":"Loginreward.json",
+                "data":
+                [
+                    {"name":"Id", "type":"int", "desc":"配置ID"},
+                    {"name":"Number_i", "type":"int", "desc":"数量"},
+                    {"name":"Time_i", "type":"int", "desc":"时间"}
+                ]
+            }
+        ]
+    },
+    "client":{
+        "totype":"xml",
+        "filelist":[
+            {
+                "fromfile":"Stringid",
+                "tofile":"StringId.xml",
+                "data":
+                [
+                    {"name":"Id","type":"int"},
+                    {"name":"String","type":"string"}
+                ]
+            }
+        ]
+    }
+}
