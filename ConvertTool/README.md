@@ -1,0 +1,1 @@
+脚本转换为exe： pyinstaller --onefile COnvertTool.py

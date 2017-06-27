@@ -14,13 +14,12 @@ import collections
 from xml.dom.minidom import Document
 
 #Usage:
-#          ./ConvertTool.py -f <from_excel>
-#Example:  ./ConvertTool.py -f source.xls
+#          ./ConvertTool.py -f <from_excel> -t <type>
+#Example:  ./ConvertTool.py -f source.xls -t client
 
 #输入参数说明：
 # -f 要转换的配置Excel文件名
-# -c 读取的转换规则配置文件名
-# -t 转换类型字符串，支持 xml,json和bin 三种格式
+# -t 转换的配置类型， client 为客户端， server 为服务器
 
 def ConvertConfig():
     
@@ -30,41 +29,50 @@ def ConvertConfig():
     #1.读取命令行参数
     parser = OptionParser() 
     parser.add_option("-f", "--fromfile", action="store", dest="fromfile", help="要转换的Excel文件名") 
+    parser.add_option("-t", "--type", action="store", dest="convtype", help="转换的类型，客户端或服务器") 
     (options, args) = parser.parse_args()       
 
     if options.fromfile is None: 
         parser.error("please input config excel file.") 
         return
 
-    CONFIG_DIR='config/'
-    CLIENT_DIR='client/'
-    SERVER_DIR='server/'
-    CONFIG_FILE='config.json'
+    if options.convtype is None:
+        parser.error("please input convert type.")
+        return
 
     fromfile = options.fromfile
+    convtype = options.convtype
+
+    CONFIG_DIR='config/'
+
+    if convtype == "client":
+        CONFIG_FILE = 'client.json'
+        CONF_TO_DIR = 'client/'
+    elif convtype == "server":
+        CONFIG_FILE = 'server.json'
+        CONF_TO_DIR = 'server/'
+    else:
+        print("invalid convtype %s\n"%(convtype))
+        return
 
     #2.读取配置文件
     jsonData = None
     with open(CONFIG_DIR+CONFIG_FILE, 'r') as JsonConfFile:
         jsonData = json.load(JsonConfFile)
 
-    #判断字段是否存在
-    if jsonData.get("server") is None or jsonData.get("client") is None:
-        print "Invalid config.json, no server or client data!"
-        return
-
     #3.读取Excel文件
     excelData = xlrd.open_workbook(CONFIG_DIR+options.fromfile)
     
     #先生成服务器的
-    print "------------------------ServerConfig------------------------"
-    iRet = ConvertOneConfig(SERVER_DIR, jsonData["server"]["filelist"], excelData, jsonData["server"]["totype"])
+    print "------------------------ConvertConfig------------------------"
+    iRet = ConvertOneConfig(CONF_TO_DIR, jsonData["filelist"], excelData, jsonData["totype"])
     if iRet != 0:
-        print "Failed to config server file, ret %d"%(iRet)
+        print "Failed to convert %s file, ret %d"%(convtype, iRet)
         return
     
     print "\n"
 
+    '''
     #再生成客户端的
     print "------------------------ClientConfig------------------------"
     iRet = ConvertOneConfig(CLIENT_DIR, jsonData["client"]["filelist"], excelData, jsonData["client"]["totype"])
@@ -73,8 +81,9 @@ def ConvertConfig():
         return
 
     print "\n"
+    '''
 
-    print "Success to convert all config file!"
+    print "Success to convert %s config file!\n"%(convtype)
 
 def ConvertOneConfig(outDir, jsonData, excelData, tofiletype):
     for convertInfo in jsonData:

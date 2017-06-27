@@ -1,0 +1,19 @@
+{
+    "totype": "xml",
+    "filelist": [
+        {
+            "fromfile": "Stringid",
+            "tofile": "StringId.xml",
+            "data": [
+                {
+                    "name": "Id",
+                    "type": "int"
+                },
+                {
+                    "name": "String",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}
