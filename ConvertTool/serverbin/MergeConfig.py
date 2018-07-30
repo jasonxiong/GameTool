@@ -43,9 +43,7 @@ def ConvertConfig():
     #2.读取所有的配置文件
     jsonData = {}
     for onefile in os.listdir(fromdir):
-        print os.path.splitext(onefile)[1]
         if os.path.isfile(os.path.join(fromdir,onefile)) and os.path.splitext(onefile)[1] == ".json":
-            print True
             jsonData[onefile] = json.load(open(os.path.join(fromdir, onefile)))
 
     #3.保存到文件
