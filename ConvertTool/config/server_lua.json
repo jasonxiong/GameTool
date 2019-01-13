@@ -1,0 +1,81 @@
+{
+    "totype": "json",
+    "filelist": [
+        {
+            "fromfile": "Fish",
+            "tofile": "Fish.json",
+            "data": [
+                {
+                    "name": "id",
+                    "type": "int",
+                    "desc": "出鱼ID"
+                },
+                {
+                    "name": "Multiple_i",
+                    "type": "int",
+                    "desc": "鱼的倍数"
+                },
+                {
+                    "name": "Type_i",
+                    "type": "int",
+                    "desc": "鱼的类型，表示出鱼的类型"
+                },
+                {
+                    "name": "Subtype_i",
+                    "type": "int",
+                    "desc": "鱼的子类型，表示具体的鱼"
+                },
+                {
+                    "name": "Typenumber_i",
+                    "type": "int",
+                    "desc": "同类型鱼的最大数量"
+                },
+                {
+                    "name": "Power_i",
+                    "type": "int",
+                    "desc": "同类鱼的出鱼权重"
+                },
+                {
+                    "name": "Tracetype_i",
+                    "type": "string",
+                    "desc": "所属轨迹类型"
+                },
+                {
+                    "name": "X_i",
+                    "type": "int",
+                    "desc": "该鱼的X方向大小"
+                },
+                {
+                    "name": "Y_i",
+                    "type": "int",
+                    "desc": "该鱼的Y方向大小"
+                },
+                {
+                    "name": "Open_i",
+                    "type": "int",
+                    "desc": "是否出该鱼"
+                },
+				{
+					"name": "Connectid_i",
+                    "type": "int",
+                    "desc": "Connectid_i"
+				},
+				{
+					"name": "Roomtype_i",
+                    "type": "int",
+                    "desc": "房间类型"
+				},
+				{
+					"name": "Interval",
+                    "type": "int",
+                    "desc": "出鱼时间间隔"
+				},
+                {
+                    "name": "Probadd",
+                    "type": "int",
+                    "desc": "爆鱼道具掉落概率加成"
+                }
+            ]
+        }
+    ]
+}
