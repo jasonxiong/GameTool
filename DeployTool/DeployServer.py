@@ -147,5 +147,7 @@ def DeployServer():
 
     print "Success to deploy all test server!\n"
 
+    os.system("pause")
+
 if __name__ == '__main__':
     DeployServer()
