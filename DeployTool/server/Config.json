@@ -1,0 +1,43 @@
+{
+    "lua": [
+        {
+            "index": 965,
+            "filename": "award_1_42004_getDuanweiAttr.lua"
+        },
+        {
+            "index": 966,
+            "filename": "award_1_42004_setDuanweiAttr.lua"
+        },        
+        {
+            "index": 980,
+            "filename": "award_1_42004_questUpdate.lua"
+        },
+        {
+            "index": 981,
+            "filename": "award_1_42004_comModel.lua"
+        },
+        {
+            "index": 982,
+            "filename": "award_1_42004_questModel.lua"
+        },
+        {
+            "index": 1080,
+            "filename": "award_1_42004_xdbyconfig.lua"
+        },
+        {
+            "index": 1081,
+            "filename": "award_1_42004_xdbylogic.lua"
+        }
+    ],
+    "proto": [
+        {
+            "index": 63,
+            "filename": "award_gtprotos_xdby.proto"
+        }
+    ],
+    "so": [
+        1,
+        2,
+        3
+    ]
+}
